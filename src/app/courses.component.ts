@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
     <ul>
         <li *ngFor="let course of courses">{{ course }}</li>
     </ul>
-    <button [style.backgroundColor]="isActive ? 'blue':'white'" class="btn btn-primary" [class.active]="isActive">Free Clicks</button><button class="btn btn-warning" (click)="onClickey($event)">Clickety</button><br><input [(ngModel)]='email' (keyup.enter)="goGetem()"/><br/><h5>{{course.title | uppercase}}</h5><br/><h5>{{course.rating | number:'2.2-2'}}</h5><br/><h5>{{course.students | number}}</h5><br/><h5>{{course.price | currency:'AUD':true:'1.2-2'}}</h5><br/><h5>{{course.releaseDate | date:'shortDate'}}</h5>{{text | summary}}
+    <button [style.backgroundColor]="isActive ? 'blue':'white'" class="btn btn-primary" [class.active]="isActive">Free Clicks</button><button class="btn btn-warning" (click)="onClickey($event)">Clickety</button><br><input [(ngModel)]='email' (keyup.enter)="goGetem()"/><br/><h5>{{course.title | uppercase}}</h5><br/><h5>{{course.rating | number:'2.2-2'}}</h5><br/><h5>{{course.students | number}}</h5><br/><h5>{{course.price | currency:'AUD':true:'1.2-2'}}</h5><br/><h5>{{course.releaseDate | date:'shortDate'}}<h5 class="text">{{ text | summary:'25' }}</h5>
     `
 })
 export class CoursesComponent {
